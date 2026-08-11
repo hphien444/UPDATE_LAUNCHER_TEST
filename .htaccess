@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^heads/fivereborn/test$ heads/fivereborn/test.php [L]
+DefaultType application/octet-stream
