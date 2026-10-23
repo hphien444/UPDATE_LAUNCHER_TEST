@@ -1,0 +1,20 @@
+WESTSIDE TEST1000073 - EAC AUTO REPAIR - 23/10/2026
+
+Da build Release x64. Bootstrap chay updater truoc EAC o lan mo binh thuong.
+Tu kiem tra SHA-25651 file EAC/runtime, tai lai file sai/thieu, xac minh truoc thay file.
+Neu khong sua duoc: dung an toan, hien ma stage/Win32, khong bo qua EAC.
+Nhat ky: WESTSIDE CITY.app/westside-eac-bootstrap.log (khong chua token).
+Giu nguyen437 file runtime1000072, EAC + anticheat DLL, anti-dump OFF.
+Catalog436 thanh vien da verify lai; khong doi file duoc ky nen khong ky lai.
+Giu OpenID, pure2/GTA3258, IPC Five, UI/icon TEST va server TEST.
+
+Kiem thu:5 suite C++; native1000072->1000073 va native sua5 file EAC hong/thieu,
+cache GAME cu.438/438 hash khop, EAC loaded, game window, InitScanner/WMI OK.
+Native update dung loopback; payload GitHub duoc xac minh rieng khi phat hanh.
+Chua xac minh tren may khach, may sach chua cai EAC, EOS login va server RemoteAuthComplete.
+Khong khang dinh xu ly duoc moi loi OS/antivirus/mang/Epic/server.
+
+QUAN TRONG: Neu1000072 da hien loi truoc updater, no khong tu tai duoc EXE moi.
+Dong WESTSIDE TEST, tai WESTSIDE TEST.exe moi trong repository nay, chay tu Downloads
+de thay bootstrap cu, hoac thay EXE trong thu muc cai. Khong can xoa game/cache.
+Khong tat antivirus, EAC hay anticheat cu. Khong deploy server/VPS, khong sua ADMIN.

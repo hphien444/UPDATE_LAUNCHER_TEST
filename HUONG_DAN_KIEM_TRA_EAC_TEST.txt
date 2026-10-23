@@ -1,21 +1,7 @@
-KIEM TRA EAC WESTSIDE TEST 1000072 - 23/10/2026
-
-Day la cong cu kiem tra, KHONG PHAI ban sua loi hay bootstrap moi.
-Bootstrap cong khai van la 1000072 EAC DUALAC; khong doi runtime/catalog.
-
-1. Tai KIEM_TRA_EAC_WESTSIDE_TEST.zip va giai nen ca .cmd + .ps1
-   vao thu muc co WESTSIDE TEST.exe dang bi loi tren may khach.
-2. Chay KIEM_TRA_EAC_WESTSIDE_TEST.cmd.
-   Co the keo WESTSIDE TEST.exe dang bi loi vao file .cmd.
-3. Gui lai KET_QUA_EAC_TEST_*.json vua duoc tao de doi chieu bo cai.
-
-Cong cu chi doc14 hash quan trong va tom tat flag khoi dong an toan.
-Khong sua bo cai, khong mo/tat game, khong goi mang, khong thu thap
-token/secret, noi dung config/log hay command line day du.
-Chi tao file bao cao JSON. Khong can tat phan mem bao ve.
-ExecutionPolicy Bypass chi ap dung cho tien trinh PowerShell nay,
-khong thay doi execution policy Windows lau dai.
-
-Kiem thu local: tu EXE/runtime1000071 cap nhat1000072 qua updater loopback
-thanh cong; EAC loaded, InitScanner/WMI init,438/438 hash khop.
-Chua tai hien loi screenshot tren may khach. Chua xac minh EOS/server TEST.
+KIEM TRA EAC WESTSIDE TEST1000073
+Giai nen canh WESTSIDE TEST.exe tren may bi loi va chay file.cmd.
+Hoac keo WESTSIDE TEST.exe vao file.cmd. Giu nguyen hop loi khi chay kiem tra.
+Gui file KET_QUA_EAC_TEST_*.json duoc tao ra; neu co, gui them westside-eac-bootstrap.log.
+Cong cu chi doc hash/flags an toan; chi ghi bao cao, khong sua bo cai hay gui mang.
+Khong gui westside-eac-client.json, token, mat khau hay khoa ky.
+Bootstrap1000073 giu runtime/DLL1000072; day la chu y, khong phai thieu ban cap nhat.
