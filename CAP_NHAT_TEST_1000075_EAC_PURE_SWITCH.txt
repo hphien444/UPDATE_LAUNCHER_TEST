@@ -1,0 +1,10 @@
+WESTSIDE TEST 1000075 - EAC PURE SWITCH REPAIR
+
+Sua loi arguments-policy khi chuyen pure0 sang pure2.
+Chrome cu ghi vietmycity vao trang thai chung; native glue dung lai giao thuc nay.
+Chi chuan hoa URI cu trong relaunch co event ke thua hop le, dung endpoint whitelist.
+Khong mo rong policy chung, khong cho query/console suffix hay server la.
+Giu EAC + anticheat DLL, anti-dump OFF; pure2, OpenID, IPC Five.
+437 file runtime va catalog436 thanh vien giu nguyen; khong can ky lai.
+Chua kiem chung tren may khach hay dang nhap EOS/ket noi choi server.
+Neu bootstrap cu dung truoc updater: dong TEST, tai EXE moi va chay mot lan.
