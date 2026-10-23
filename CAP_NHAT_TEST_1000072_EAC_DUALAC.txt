@@ -1,0 +1,12 @@
+WESTSIDE TEST 1000072 - EAC DUALAC - 23/10/2026
+
+Tich hop EAC/EOS OpenID tu WESTSIDE CITY ADMIN 1000085 DUALAC.
+Anticheat DLL van chay song song; chi tat anti-dump.
+Mac dinh pure2/GTA3258. Giu UI/icon TEST va may chu thu nghiem.
+Catalog EAC rieng da ky va verify; 437 file runtime + WESTSIDE TEST.exe.
+Giu deployment Live cua ADMIN; client enforce=false.
+Da test local: cap nhat runtime, EAC loaded, InitScanner va WMI init.
+Chua kiem chung dang nhap EOS, join server TEST va RemoteAuthComplete/0r_AC.
+Chua kiem thu cai dich vu EAC lan dau tren may sach/may khach.
+Chi cap nhat client TEST; khong thay doi ADMIN hay deploy server/VPS.
+Khong kem GTA/RPF, log/dump, khoa ky hay credential TrustedServer.
