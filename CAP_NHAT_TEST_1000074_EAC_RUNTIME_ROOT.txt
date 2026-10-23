@@ -1,0 +1,11 @@
+WESTSIDE TEST 1000074 - EAC RUNTIME ROOT REPAIR
+
+Dung chung runtime root voi updater/repair cho config, EOS wrapper va log.
+Sua duong dan .app bi lap khi mo launcher tu runtime.
+Thu lai toi da 5 lan khi config bi khoa tam thoi; bao dung stage/ma Win32.
+Giu EAC + anticheat DLL, anti-dump OFF; pure2, OpenID, IPC Five.
+51 file EAC/runtime tiep tuc duoc kiem SHA-256 va tu tai lai neu sai/thieu.
+437 file runtime va catalog436 thanh vien giu nguyen; khong can ky lai.
+Khong bo qua EAC khi sua that bai; khong tat antivirus.
+Chua kiem chung tren may khach hay dang nhap EOS/ket noi server.
+Neu bootstrap cu dung truoc updater: dong TEST, tai EXE moi va chay mot lan.
