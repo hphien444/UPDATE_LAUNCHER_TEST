@@ -2,12 +2,6 @@
   "schema": 1,
   "client": "westside-test",
   "version": 1000076,
-  "enabled": true,
-  "networks": [
-    {
-      "sha256": "2fb823aae118a28bbd5dddf827286620699c6254307a06a1a5d407c49b3cddd8",
-      "notBefore": 1792814583,
-      "notAfter": 1792828983
-    }
-  ]
+  "enabled": false,
+  "networks": []
 }
