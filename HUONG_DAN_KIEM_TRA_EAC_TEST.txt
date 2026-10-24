@@ -1,4 +1,4 @@
-KIEM TRA EAC WESTSIDE TEST 1000077
+KIEM TRA EAC WESTSIDE TEST 1000078
 Mo launcher bang WESTSIDE TEST.exe, khong can MO_MAY_NET_AN_TOAN.cmd.
 IP da duyet va con han: tu chon che do khong EAC, anticheat DLL cu van ON.
 Cong cu chan doan: giai nen canh EXE, chay KIEM_TRA_EAC_WESTSIDE_TEST.cmd.

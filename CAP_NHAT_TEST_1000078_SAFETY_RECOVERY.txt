@@ -1,0 +1,84 @@
+# WESTSIDE TEST 1000078 - khoi phuc EAC sau dau chan cu
+
+## Loi duoc xu ly
+
+TEST 1000077 tu tao westside-eac-safety.hold khi nhan quyen IP. Sau khi
+go whitelist, dau chan van ton tai nen TEST dung o safety-preflight,
+du may do co the van chay ADMIN binh thuong. Hop thoai cu khong phan biet
+dau chan cu, dich vu phong net hay BugCheck. Anh loi KHONG tu no chung minh
+nguyen nhan cu the, va ADMIN chay duoc KHONG bao dam TEST khong the BSOD.
+
+## Cach dung
+
+- Thoat TEST/game truoc, mo WESTSIDE TEST.exe cua ban nay.
+- IP duoc duyet/con han: van tu chon compatibility EAC-OFF; legacy AC ON.
+- Khong duoc duyet, khong co dau nguy co/hold: van chay EAC + legacy AC.
+- Neu chi co dau hold TRONG cu, khong thay dich vu phong net/BugCheck trong
+  pham vi kiem tra: hien xac nhan khoi phuc EAC, mac dinh la KHONG.
+- Chi chon CO neu nguoi dung muon thu lai EAC va da hieu nguy co. Neu tung
+  BSOD voi EAC hoac chua ro, chon KHONG va lien he admin.
+- CO: doi ten nguyen file hold thanh .hold.retry-<pid>-<tick>.bak, khong xoa,
+  roi di vao EOS/EAC binh thuong. KHONG cap quyen vao game khong EAC.
+- KHONG: giu nguyen hold va thoat, khong thu nap driver.
+- Cafe service/BugCheck, hold co noi dung/khong doc duoc/directory/reparse:
+  van dung an toan, KHONG cung cap nut khoi phuc bang cach nay.
+- Dieu kien an toan duoc kiem tra lai sau xac nhan, truoc khi doi ten hold.
+  That bai doi ten: dung, khong tu cho vao game. Khong ghi de backup cu.
+- Khong can file CMD. Khong tu ep chay EAC tren may net/VM tung co van de.
+
+## Log
+
+WESTSIDE CITY.app/westside-eac-bootstrap.log, version=1000078:
+- safety-empty-legacy-hold: dau trong cu, co the mo xac nhan.
+- safety-cafe-service: tim thay dich vu phong net theo danh sach hien co.
+- safety-bugcheck-after-pending: tim thay BugCheck sau pending EAC session.
+- safety-manual-or-unknown-hold / safety-hold-unreadable: khong tu xu ly.
+- safety-recovery-consent-required: cho nguoi dung xac nhan.
+- safety-recovery-declined: tu choi, giu hold, khong mo EAC.
+- safety-recovery-file: loi file, dung an toan.
+- safety-recovery-restored-protected-mode: da luu hold cu va khoi phuc.
+- protected-mode-selected: da chon EAC, KHONG dong nghia server authenticated.
+- compatibility-admin-approved-EAC-OFF: co grant IP hop le, khong gia auth.
+
+## Pham vi
+
+Chi MAIN thay doi so voi 1000077. Runtime 437 file byte-identical, bao gom
+sticky/citizen-anticheat, mod whitelist, OpenID, Live, pure2/GTA3258, UI,
+IPC va anti-dump OFF. Policy contract van1000076; khong doi backend/whitelist.
+Loi thu hoi whitelist trong phien dang mo van con: grant cache den het han.
+Ban nay KHONG sua viec thu hoi giua phien va khong nap EAC giua game.
+
+MAIN nam ngoai 436 catalog members. Tool EAC chinh thuc verify/list lai
+catalog giu nguyen; khong ky lai va khong doc khoa ky. Receipt sign1000076
+van la lich su. Giu runtime/catalog chu khong vo hieu kiem tra.
+
+## Kiem thu va gioi han
+
+Xem KIEM_CHUNG_BUILD.json cho ket qua thuc te sau khi dong goi.
+11 suite C++ gom regression cu va recovery header that: deny/cancel/risk/
+file lock/recheck/rename backup, xac nhan chi chon EAC, khong chon EAC-OFF.
+Process creation/policy va tin hieu cafe/BugCheck duoc mock trong tests;
+file handle/rename Win32 tren fixture la that. HTTP/SDK tests ke thua co
+than ham sao chep. KHONG coi tests nay la gameplay/driver/RemoteAuth test.
+Full/delta XZ, manifests, repair pins, hash runtime/catalog va ZIP duoc
+kiem boi verify_package.py. Khong kem cache GTA, log, dump hay private key.
+Chua test tren may khach trong anh; chua smoke game1000078. O C may build
+gan het dung luong, khong tu don file nguoi dung hoac mo game de thu driver.
+Phat hanh qua UPDATE_LAUNCHER_TEST. Khong sua ADMIN/CITY, backend, policy hoac VPS.
+
+## Build va rollback
+
+Workspace: E:/LaucherAdmin/source/local_updates/westside_test_1000078_safety_recovery_20261024
+MSVC14.44.35207, v143, SDK10.0.26100, Release x64. TEMP/TMP tren E.
+python run_tests.py
+python build_release.py CitiLaunch_test
+python prepare_candidate.py
+python verify_package.py
+Obj: obj/CitiLaunch_test. Out: out. Script assemble/package chi chay mot lan;
+tao workspace moi neu can ban tiep theo, khong ghi de delivery da chot.
+Ban1000077 va snapshot cu giu nguyen. Runtime giong nhau, rollback MAIN
+bang ban luu1000077 khi launcher/game da thoat. De khoi phuc chan an toan,
+chi khi file .hold khong ton tai, doi ten dung .hold.retry-*.bak tro lai
+.hold sau khi tat launcher/game. Khong xoa dau chan moi hoac ghi de file.
+
+MAIN SHA256: 1180eb1e1eebf94017802b92e59ce74f65c8abf2d6a35dac44cfcda767af4fd3
