@@ -1,0 +1,16 @@
+WESTSIDE TEST 1000081 - VPS WHITELIST R2
+Mo WESTSIDE TEST.exe; khong can script rieng de chon EAC.
+Moi lan khoi dong/relaunch hoi truc tiep API tren VPS 103.98.151.240:
+https://api.westsidecity.xyz/wl-ip/api/launcher-decision
+Trang duyet: https://api.westsidecity.xyz/wl-ip/
+Khong whitelist: chay EAC. Whitelist hop le: che do tuong thich da duyet.
+Khong truy cap duoc API: dung an toan, khong tu cap quyen bo EAC.
+Khong lay quyen tu GitHub/CDN, ipify, marker hoac file luu tren may.
+GitHub chi phat file cap nhat TEST; policy cu duoc giu nguyen cho lich su.
+Thu hoi ap dung lan khoi dong moi; khong nap driver giua phien game.
+Legacy anticheat luon ON; anti-dump OFF; EAC enforce=false.
+Pure2/build3258, mod whitelist/camera/UI/icon/IPC Five giu nguyen.
+Signed catalog TEST rieng; khong tron DLL/catalog cua CITY/ADMIN.
+Da test regression, live API, official catalog va toan bo goi bootstrap.
+Chua test gameplay/may gap BSOD/cai EAC lan dau/RemoteAuthComplete.
+Script KIEM_TRA_EAC chi doc hash/trang thai, khong sua hay mo launcher.
