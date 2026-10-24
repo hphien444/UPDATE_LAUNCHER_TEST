@@ -1,0 +1,33 @@
+WESTSIDE TEST 1000077 - TU KIEM TRA WHITELIST KHI MO EXE
+
+Chi mo WESTSIDE TEST.exe, khong can file .cmd hay tham so shortcut.
+IP duoc admin duyet/con han: tu chon EAC-OFF, anticheat DLL legacy van ON.
+Sua nhanh nhan EOS marker cu: quyen hop le khong con bi giu o che do EAC.
+Tu luu westside-eac-safety.hold sau khi nhan quyen. Lan mo sau mat mang/
+het han quyen se dung an toan, khong tu thu lai EAC. Hold KHONG cap quyen.
+May chua co quyen va khong co hold/tin hieu nguy co van chay EAC nhu cu.
+Khong tu cap quyen chi vi may ao; khong cam ket nhan dien moi may ao/BSOD.
+Neu may da gap BSOD va CHUA nhan duoc quyen, helper an toan van co the dung
+de yeu cau dung truoc EAC. Helper la tuy chon, khong bat buoc de ap dung IP.
+Khong mo truc tiep start_protected_game.exe. Thoat launcher cu roi mo MAIN.
+
+Web whitelist: https://api.westsidecity.xyz/wl-ip/
+Giu NGUYEN policy/eac-cafe-1000076.json va tat ca quyen IP hien tai.
+1000077 la version EXE;1000076 van la version hop dong policy/runtime.
+Khong deploy backend/VPS, khong doi ADMIN/CITY, khong doi server enforcement.
+EAC-OFF khong la EAC authenticated; server bat buoc EAC van co the tu choi.
+
+Chi MAIN EXE thay doi;437 runtime file giu dung hash1000076.
+436 catalog members duoc tool EAC chinh thuc verify/list lai; khong can ky
+lai vi MAIN ngoai catalog. Giu legacy scanner, pure2/GTA3258, whitelist mod,
+camera/UI/icon, OpenID/Live, IPC Five, repair51 pins; anti-dump OFF.
+10 suite C++ PASS. Header bootstrap that duoc test voi network/process mocks.
+Chua test game that1000077/may khach/may ao/EOS login/RemoteAuth/0r_AC.
+Native game smoke chua chay do o C may build het dung luong.
+
+MAIN SHA256: 3cc741f99a9bc909d286eb5847cdbe67f7d16f213dc3f0abd19c888b15e4936d
+Upload object va verify detached commit truoc, kich hoat main cuoi cung.
+Khong force-push, khong xoa object cu, khong kem secret/key/log/dump/GTA cache.
+Ha head khong tu ha EXE da cap nhat. Rollback can MAIN/runtime dong bo hoac
+forward-fix; khong dung EAC cu tren may da bi BSOD de thu van may.
+Huong dan1000076 trong repo la lich su; voi1000077 uu tien ghi chu nay.

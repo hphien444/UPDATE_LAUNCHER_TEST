@@ -1,7 +1,8 @@
-KIEM TRA EAC WESTSIDE TEST 1000076
-Giai nen canh WESTSIDE TEST.exe; chay KIEM_TRA_EAC_WESTSIDE_TEST.cmd.
-Cong cu chi doc hash/flags, ghi JSON; khong mo launcher, sua bo cai hay gui mang.
-Khong gui config, token, mat khau, private key hoac dump vao repo public.
-GAME cache co the chua ton tai neu chua vao game: missing khong tu dong la loi.
-Co cafe marker KHONG chung minh da duoc cap quyen/EAC authenticated.
-May da BSOD: doc HUONG_DAN_MAY_NET_1000076.md va dung helper an toan.
+KIEM TRA EAC WESTSIDE TEST 1000077
+Mo launcher bang WESTSIDE TEST.exe, khong can MO_MAY_NET_AN_TOAN.cmd.
+IP da duyet va con han: tu chon che do khong EAC, anticheat DLL cu van ON.
+Cong cu chan doan: giai nen canh EXE, chay KIEM_TRA_EAC_WESTSIDE_TEST.cmd.
+Chi doc hash/flags va ghi JSON; khong mo client, sua bo cai hay gui du lieu.
+GAME cache chua ton tai truoc lan vao game dau la binh thuong.
+Cafe marker KHONG chung minh EAC authenticated. Khong gui token/key/dump.
+Chi gui log can thiet qua kenh ho tro rieng, khong dang log len repo public.
