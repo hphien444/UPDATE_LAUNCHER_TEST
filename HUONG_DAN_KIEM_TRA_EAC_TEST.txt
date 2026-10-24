@@ -1,7 +1,17 @@
-KIEM TRA EAC WESTSIDE TEST 1000079
+KIEM TRA EAC WESTSIDE TEST 1000080
 Mo launcher bang WESTSIDE TEST.exe, khong can MO_MAY_NET_AN_TOAN.cmd.
 IP da duyet va con han: tu chon che do khong EAC, anticheat DLL cu van ON.
 Khong whitelist: mac dinh EAC, khong hoi khoi phuc; van giu chan nguy co an toan.
+Moi lan khoi dong check lai policy/IP; thu hoi thi khong dung quyen cu.
+Mang/API/kiem tra IP loi: dung an toan, khong tu vao game hay nap driver.
+Log tai WESTSIDE CITY.app/westside-eac-bootstrap.log, version=1000080:
+- whitelist-live-check-start: bat dau check moi.
+- whitelist-live-approved + compatibility-admin-approved-EAC-OFF: IP con quyen.
+- whitelist-live-not-approved + protected-mode-selected: khong con quyen.
+- whitelist-revoked-relaunch-protected: bo marker cafe cu, mo EOS/EAC.
+- whitelist-live-unavailable/invalid, public-ip-unavailable/invalid: dung vi chua check duoc.
+- compatibility-safety-hold: dung do nguy co may net/BugCheck/hold; khong phai duoc whitelist.
+protected-mode-selected chi la chon luong; chua chung minh driver/game da authenticated.
 Cong cu chan doan: giai nen canh EXE, chay KIEM_TRA_EAC_WESTSIDE_TEST.cmd.
 Chi doc hash/flags va ghi JSON; khong mo client, sua bo cai hay gui du lieu.
 GAME cache chua ton tai truoc lan vao game dau la binh thuong.

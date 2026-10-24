@@ -1,0 +1,73 @@
+# WESTSIDE TEST 1000080 - kiem tra whitelist moi moi lan khoi dong
+
+## Thay doi
+
+- Moi lan MAIN khoi dong, ke ca wrapper/pure relaunch, doc policy hien tai
+  tu GitHub Contents API va lay lai IP public. Khong dung lai grant da cache,
+  khong lay Raw CDN lam nguon cap quyen cho lan khoi dong moi.
+- IP duoc admin duyet va con han: che do tuong thich EAC-OFF; anticheat DLL
+  legacy van giu nguyen. Thu hoi/het han/doi IP: chon luong EOS/EAC.
+- Marker cafe cu khong cap quyen; neu bi thu hoi, bo marker cu va mo lai
+  qua EOSBootstrapper chinh thuc. Khong hoi xac nhan khoi phuc EAC.
+- Mang/API/IP loi hoac policy sai: dung va bao loi, KHONG vao game bang
+  quyen cu, KHONG tu bat driver tren may da duyet khi chua biet trang thai.
+- Hold rong cu duoc archive neu khong co dau hieu nguy co. Cafe service,
+  BugCheck, hold manual/co noi dung/khong doc duoc van dung an toan; day
+  khong phai whitelist va khong cho vao game EAC-OFF.
+
+## Pham vi va catalog
+
+Chi doi WESTSIDE TEST.exe (MAIN) tu 1000079 len 1000080. Giu nguyen 437 file
+runtime, 436 catalog members, Live deployment, EAC + anticheat DLL legacy,
+anti-dump OFF, mod whitelist, camera, icon va updater repair pins.
+MAIN khong nam trong catalog: khong ky lai; chay verify/list bang cong cu
+EAC chinh thuc, so hash tat ca thanh vien va catalog outputs truoc phat hanh.
+Khong dua key, token, private config, log/dump hay GTA cache vao goi.
+
+Ba file source thay doi trong snapshot rieng cua ban build nay:
+- code/client/launcher/WestsideCafeStartup.h (moi)
+- code/client/launcher/WestsideEosBootstrap.h
+- code/shared/citversion.h
+Snapshot/source cua 1000079 khong sua. SOURCE_CHANGES.json va
+FILE_THAY_DOI_SHA256.csv ghi hash doi chieu.
+
+## Kiem chung
+
+- Build Release|x64, v143 MSVC 14.44.35207, Windows SDK 10.0.26100.
+- 12 C++ suite: cap -> thu hoi -> cap lai trong cung process; het han,
+  doi IP, policy disabled, offline/rate limit, hash/base64/schema sai;
+  check lai voi marker cafe/EOS; pure handoff va safety recovery.
+- Test bootstrap/startup dung header that, mock HTTP/process cho cac
+  kich ban; mot so suite cu HTTP/SDK dung ham trich tu source.
+- Probe WinHTTP chi doc bang code that; khong ghi policy, khong mo game,
+  khong nap driver. Ket qua nam tai evidence/live-startup-check.json.
+- Roundtrip XZ/manifest, hash runtime/catalog/pins, icon va ZIP duoc kiem tra.
+- CHUA test gameplay/EAC driver hay may khach bi loi. O C build het cho,
+  khong don dep du lieu nguoi dung. Khong tuyen bo da fix BSOD.
+
+## Gioi han
+
+- Kiem tra khi khoi dong; khong thu hoi truc tiep phien game dang chay.
+  Hay thoat game va launcher truoc khi thu lai sau khi doi whitelist.
+- GitHub API public co gioi han thuong 60 request/gio/IP; moi MAIN/wrapper
+  deu check. Nhieu may chung NAT co the gap quota. Khi do dung an toan,
+  khong dung cache cu. Chua deploy endpoint backend moi de giai quyet quota.
+- Runtime DLL khong doi, van tu kiem tra lease theo policy cu. Khong suy
+  dien splash EAC co/khong la bang chung EAC da authenticated.
+- Chua co log tu may bi loi de khang dinh CDN hay hold la nguyen nhan goc.
+
+## Build lai va bang chung
+
+Workspace: E:\LaucherAdmin\source\local_updates\westside_test_1000080_fresh_whitelist_20261024
+TMP/TEMP: thu muc tmp trong workspace (khong dung o C).
+Lenh: python run_tests.py; python build_release.py CitiLaunch_test;
+python prepare_candidate.py; python verify_package.py.
+Output: out, obj, build-logs, evidence trong workspace. Khong chay lai
+prepare/verify de ghi de goi; ban tiep theo phai dung workspace va pin moi.
+Goi day du/delta va delivery: E:\LaucherAdmin\publish\WESTSIDE_TEST_1000080_FRESH_WHITELIST_20261024.
+
+Phat hanh qua UPDATE_LAUNCHER_TEST. Khong sua ADMIN/CITY, backend, policy hoac VPS.
+Day la ghi nhan build local truoc phat hanh; xem PHAT_HANH_GITHUB_1000080.json
+va DA_PHAT_HANH_GITHUB_1000080.md cho trang thai phat hanh cuoi cung.
+
+MAIN SHA256: 352838a86dcc8fef668bffd213d9ed8eb225383191870922ba994c0c7f5fa816
