@@ -1,7 +1,7 @@
-KIEM TRA EAC WESTSIDE TEST1000075
-Giai nen canh WESTSIDE TEST.exe tren may bi loi va chay file.cmd.
-Hoac keo WESTSIDE TEST.exe vao file.cmd. Giu nguyen hop loi khi chay kiem tra.
-Gui file KET_QUA_EAC_TEST_*.json duoc tao ra; neu co, gui them westside-eac-bootstrap.log.
-Cong cu chi doc hash/flags an toan; chi ghi bao cao, khong sua bo cai hay gui mang.
-Khong gui westside-eac-client.json, token, mat khau hay khoa ky.
-Bootstrap1000075 giu runtime/DLL1000072; day la chu y, khong phai thieu ban cap nhat.
+KIEM TRA EAC WESTSIDE TEST 1000076
+Giai nen canh WESTSIDE TEST.exe; chay KIEM_TRA_EAC_WESTSIDE_TEST.cmd.
+Cong cu chi doc hash/flags, ghi JSON; khong mo launcher, sua bo cai hay gui mang.
+Khong gui config, token, mat khau, private key hoac dump vao repo public.
+GAME cache co the chua ton tai neu chua vao game: missing khong tu dong la loi.
+Co cafe marker KHONG chung minh da duoc cap quyen/EAC authenticated.
+May da BSOD: doc HUONG_DAN_MAY_NET_1000076.md va dung helper an toan.
