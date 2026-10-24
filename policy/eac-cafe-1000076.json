@@ -8,6 +8,11 @@
       "sha256": "1b8c42401fa5d7b53153ece339c936f9050da84a36286ff1d0a1d18b2c6c3376",
       "notBefore": 1792833797,
       "notAfter": 1792920197
+    },
+    {
+      "sha256": "2fb823aae118a28bbd5dddf827286620699c6254307a06a1a5d407c49b3cddd8",
+      "notBefore": 1792834067,
+      "notAfter": 1792920467
     }
   ]
 }
