@@ -1,6 +1,7 @@
-KIEM TRA EAC WESTSIDE TEST 1000078
+KIEM TRA EAC WESTSIDE TEST 1000079
 Mo launcher bang WESTSIDE TEST.exe, khong can MO_MAY_NET_AN_TOAN.cmd.
 IP da duyet va con han: tu chon che do khong EAC, anticheat DLL cu van ON.
+Khong whitelist: mac dinh EAC, khong hoi khoi phuc; van giu chan nguy co an toan.
 Cong cu chan doan: giai nen canh EXE, chay KIEM_TRA_EAC_WESTSIDE_TEST.cmd.
 Chi doc hash/flags va ghi JSON; khong mo client, sua bo cai hay gui du lieu.
 GAME cache chua ton tai truoc lan vao game dau la binh thuong.

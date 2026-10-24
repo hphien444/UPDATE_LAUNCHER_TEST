@@ -2,7 +2,7 @@
 setlocal DisableDelayedExpansion
 cd /d "%~dp0" || exit /b 1
 if not exist "WESTSIDE TEST.exe" (
-    echo Khong tim thay WESTSIDE TEST.exe. Dat file nay canh launcher TEST 1000078.
+    echo Khong tim thay WESTSIDE TEST.exe. Dat file nay canh launcher TEST 1000079.
     pause
     exit /b 1
 )
@@ -12,9 +12,9 @@ if not exist "WESTSIDE CITY.app\" (
     exit /b 1
 )
 rem Refuse older launchers that do not understand the safety request.
-powershell.exe -NoLogo -NoProfile -NonInteractive -Command "try { if ((Get-FileHash -LiteralPath 'WESTSIDE TEST.exe' -Algorithm SHA256 -ErrorAction Stop).Hash -ne '1180eb1e1eebf94017802b92e59ce74f65c8abf2d6a35dac44cfcda767af4fd3') { exit 1 } } catch { exit 1 }; exit 0"
+powershell.exe -NoLogo -NoProfile -NonInteractive -Command "try { if ((Get-FileHash -LiteralPath 'WESTSIDE TEST.exe' -Algorithm SHA256 -ErrorAction Stop).Hash -ne 'a5cdb3855c7953375d7f3504bf55ce1ecaa61821cd5a83aa5357aaccbbcd5681') { exit 1 } } catch { exit 1 }; exit 0"
 if errorlevel 1 (
-    echo Launcher khong dung ban TEST 1000078 da kiem chung. Khong khoi dong.
+    echo Launcher khong dung ban TEST 1000079 da kiem chung. Khong khoi dong.
     pause
     exit /b 1
 )

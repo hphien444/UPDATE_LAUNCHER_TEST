@@ -1,0 +1,86 @@
+# WESTSIDE TEST 1000079 - khong whitelist mac dinh chay EAC
+
+## Thay doi so voi 1000078
+
+- Bo hoan toan hop hoi Yes/No "Khoi phuc EAC". Nguoi dung khong can bam CO.
+- Khong co whitelist hop le, khong co canh bao an toan: tu chon EOS/EAC.
+- Neu con file westside-eac-safety.hold TRONG tu ban cu, khong phat hien
+  dich vu phong net/BugCheck trong pham vi kiem tra: tu doi ten file thanh
+  .hold.retry-<pid>-<tick>.bak, roi tiep tuc luong CO EAC. Khong xoa backup,
+  khong cap whitelist va khong tu vao game o che do EAC-OFF.
+- IP duoc admin duyet va grant con han: giu compatibility EAC-OFF, legacy
+  anticheat DLL van ON. Khong thay doi policy whitelist tren GitHub.
+- Cafe service/BugCheck sau pending EAC session, hold co noi dung/manual,
+  directory/reparse/khong doc duoc: van dung an toan. Loi doi ten hold cung
+  dung, khong fallback sang EAC-OFF. Day khong phai hop hoi khoi phuc EAC.
+- Kiem tra lai nguy co khi file da duoc khoa truoc khi atomic rename.
+- Sua buffer FILE_RENAME_INFO thieu cho ky tu NUL ket thuc. Test Win32
+  phat hien ten backup co the bi them ky tu rac; nay ten dung chinh xac va
+  backup trung ten bi tu choi, khong ghi de.
+
+## Gioi han can biet
+
+Hold trong cu KHONG ghi nguyen nhan: khong the chung minh no chi do whitelist.
+Detector BugCheck chi xet pending session va event1001 trong 7 ngay; khong
+tim thay event khong chung minh may chua tung BSOD hay EAC se chay an toan.
+Ban nay tu khoi phuc hold trong theo yeu cau chu du an; khong bao dam het
+man hinh xanh. Dau manual/unknown khong duoc tu xoa. Cafe marker cu khong
+co grant van bi tu choi; mo truc tiep WESTSIDE TEST.exe, khong can CMD.
+Thu hoi whitelist giua phien dang mo van phu thuoc grant cache den het han;
+khong nap EAC giua game. Ban nay khong sua co che thu hoi giua phien.
+
+## Log
+
+WESTSIDE CITY.app/westside-eac-bootstrap.log, version=1000079:
+- safety-empty-legacy-hold: tim thay hold trong cu.
+- safety-recovery-restored-protected-mode: tu luu hold cu, khoi phuc CO EAC.
+- protected-mode-selected: da chon EAC, CHUA chung minh server authenticated.
+- compatibility-admin-approved-EAC-OFF: grant whitelist IP hop le.
+- safety-cafe-service / safety-bugcheck-after-pending: dung an toan.
+- safety-manual-or-unknown-hold / safety-hold-unreadable: khong tu khoi phuc.
+- safety-recovery-file: loi file khi khoi phuc, khong mo game.
+Khong con safety-recovery-consent-required / safety-recovery-declined.
+
+## Pham vi va catalog
+
+Chi build lai MAIN Release x64. 437 file runtime va 436 catalog members
+giu nguyen hash1000078, gom EAC, legacy AC, mod whitelist, OpenID, Live,
+pure2/GTA3258, UI/IPC va anti-dump OFF. Policy contract van1000076.
+MAIN khong nam trong catalog. Tool EAC chinh thuc verify/list lai catalog;
+khong ky lai va khong doc khoa ky. Khong sua ADMIN/CITY/backend/VPS.
+Khong kem GTA/RPF, log/dump, secret, khoa ky hay TrustedServer.
+
+## Kiem thu
+
+Ket qua thuc te sau dong goi: KIEM_CHUNG_BUILD.json va evidence/.
+11 suite C++ bao gom header bootstrap/recovery that: mac dinh EAC khong
+hop hoi, hold trong duoc archive, grant moi duoc EAC-OFF; risk/recheck,
+file lock/directory/reparse/manual, backup collision va pure/URI regression.
+Policy/process/risk signals duoc mock; file handle/rename Win32 that tren
+fixture. HTTP/SDK tests ke thua co than ham sao chep. Khong coi unit tests
+la kiem chung driver, gameplay, EOS login hay RemoteAuth tren may khach.
+Full/delta XZ, metadata, repair pins, icon, runtime/catalog va ZIP deu duoc
+doi chieu hash. Chua mo client/nap driver1000079: o C gan het dung luong,
+khong don file nguoi dung; chua co may khach de kiem thu.
+Phat hanh qua UPDATE_LAUNCHER_TEST. Khong sua ADMIN/CITY, backend, policy hoac VPS.
+Trang thai tren la luc build local; xem PHAT_HANH_GITHUB_1000079.json neu
+da co de biet commit va ket qua tai lai sau phat hanh.
+
+## Build va rollback
+
+Workspace: E:/LaucherAdmin/source/local_updates/westside_test_1000079_eac_default_20261024
+MSVC14.44.35207, v143, SDK10.0.26100, Release x64; TEMP/TMP tren E.
+python run_tests.py
+python build_release.py CitiLaunch_test
+python prepare_candidate.py
+python verify_package.py
+Obj: obj/CitiLaunch_test. Out: out. Khong chay lai assemble/package de ghi
+de ban da chot; tao workspace moi cho ban sau. Snapshot1000078 giu nguyen.
+Rollback local MAIN bang ban1000078 da luu khi launcher/game da thoat.
+Khoi phuc safety stop: khi khong co .hold moi, doi ten dung backup .bak
+tro lai .hold, khong ghi de file. Ban1000079 se tiep tuc tu khoi phuc hold
+trong khong co tin hieu nguy co; can admin danh gia may BSOD truoc khi thu.
+Rollback phat hanh dung forward-fix version cao hon, khong reset branch hay
+ghi de whitelist moi. Ha metadata khong tu ha EXE tren may da cap nhat.
+
+MAIN SHA256: a5cdb3855c7953375d7f3504bf55ce1ecaa61821cd5a83aa5357aaccbbcd5681
