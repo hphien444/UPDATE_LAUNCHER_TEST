@@ -1,0 +1,17 @@
+WESTSIDE TEST 1000083 - DEVICE COMPATIBILITY DEMO
+TEST ONLY. Do not upload to CITY/ADMIN or change game server.
+Admin: https://sg.westsidecity.xyz/wl-device-test/
+Update TEST; launch DeviceCheck using the same Windows user as the launcher.
+Send its 64-character device code to admin. New devices have NO exemption.
+Admin login uses the existing WESTSIDE admin/superadmin account, NOT VPS login.
+Grant 1-1440 minutes with reason; then close game/launcher and reopen TEST.
+Approved device: EAC OFF, legacy anticheat ON, NOT EAC-authenticated.
+Normal machine: existing EAC path and safety hold stay enabled.
+IP whitelist has precedence and remains independent. Revoking a device does not revoke IP approval.
+Device decisions: live verified TLS + CNG challenge/proof; renew every 20 seconds, lease <=60 seconds.
+Unavailable/revoked/expired decision: no silent unprotected play; never load EAC mid-game.
+No automatic crash exemption. No proof that EAC caused the reported Windows BugChecks.
+HWID plus per-user non-exportable software key is not hardware attestation; Windows reinstall/key loss can change code.
+Official catalog signed and verified. Use matching MAIN/sticky/anticheat/catalog.
+No real affected-player gameplay or live admin login verified yet.
+Keep existing updater history/policy; publish TEST with non-force fast-forward only.
