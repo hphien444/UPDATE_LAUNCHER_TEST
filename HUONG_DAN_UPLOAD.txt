@@ -1,17 +1,49 @@
-WESTSIDE TEST 1000083 - DEVICE COMPATIBILITY DEMO
-TEST ONLY. Do not upload to CITY/ADMIN or change game server.
-Admin: https://sg.westsidecity.xyz/wl-device-test/
-Update TEST; launch DeviceCheck using the same Windows user as the launcher.
-Send its 64-character device code to admin. New devices have NO exemption.
-Admin login uses the existing WESTSIDE admin/superadmin account, NOT VPS login.
-Grant 1-1440 minutes with reason; then close game/launcher and reopen TEST.
-Approved device: EAC OFF, legacy anticheat ON, NOT EAC-authenticated.
-Normal machine: existing EAC path and safety hold stay enabled.
-IP whitelist has precedence and remains independent. Revoking a device does not revoke IP approval.
-Device decisions: live verified TLS + CNG challenge/proof; renew every 20 seconds, lease <=60 seconds.
-Unavailable/revoked/expired decision: no silent unprotected play; never load EAC mid-game.
-No automatic crash exemption. No proof that EAC caused the reported Windows BugChecks.
-HWID plus per-user non-exportable software key is not hardware attestation; Windows reinstall/key loss can change code.
-Official catalog signed and verified. Use matching MAIN/sticky/anticheat/catalog.
-No real affected-player gameplay or live admin login verified yet.
-Keep existing updater history/policy; publish TEST with non-force fast-forward only.
+WESTSIDE TEST 1000084 - Discord whitelist (TEST only)
+
+Admin web: https://api.westsidecity.xyz/wl-ip/#discord
+Use the existing admin login. IP and HWID/device tabs remain unchanged.
+Only WESTSIDE TEST 1000084 understands Discord compatibility grants.
+CITY and ADMIN are NOT updated by this release.
+
+ACTIVATION PREREQUISITE FOR THE DISCORD APPLICATION OWNER:
+Application ID: 1509809023497535538
+Register this exact OAuth2 redirect URI in Discord Developer Portal:
+https://sg.westsidecity.xyz/wl-device-test/discord/callback
+Flow: implicit, response_type=token, identify scope only. No Client Secret
+is needed or distributed. Do not send a Client Secret to players/admin web.
+Real Discord login and application redirect configuration were NOT verified
+by automated tests. Until configured and linked, raw Discord IDs cannot
+grant an EAC exemption. Normal protected behavior remains available.
+
+PLAYER / ADMIN TEST:
+1. Close game/launcher; open WESTSIDE TEST to update to 1000084.
+2. Run WESTSIDE TEST DiscordLink.exe using the SAME Windows account as TEST.
+   The helper registers a device public key, displays its code, then opens
+   the linking page only after Enter. It does not start EAC or the game.
+3. Authenticate with Discord; compare the displayed device code and account
+   with your own machine before confirming. Never enter somebody else's code.
+4. Admin grants the exact Discord numeric ID in the Discord TEST tab.
+   Linking alone is NOT approval. Grants last 1-1440 minutes (max 24 hours).
+5. Open that account in Discord desktop, then restart WESTSIDE TEST.
+   Approved + verified device link: compatibility mode, EAC OFF, legacy AC ON.
+   Not approved/unlinked: normal EAC path unless IP/HWID independently grants
+   compatibility. Existing safety-hold/recovery rules still apply.
+   Missing Discord: no Discord HTTP lookup, no OAuth prompt, no waiting for
+   Discord; normal updater/UI flow and existing IP/HWID/EAC rules continue.
+
+Device/account links expire after at most 24 hours; relink when necessary.
+Changing Windows account/key or Discord account requires linking that identity.
+Leases expire in at most 60 seconds and renew every 20 seconds. Revocation,
+account disappearance/change or expiry ends compatibility safely; it never
+hot-loads the EAC driver into an already running unprotected session.
+API/storage/TLS errors are not whitelist approvals. Existing safety checks
+are not bypassed. No token is logged or persisted by the linking service.
+
+Published as TEST updater on hphien444/UPDATE_LAUNCHER_TEST only. Existing IP
+policy/history and immutable objects are preserved. No game-server restart.
+Automated native/API/browser/catalog tests are not proof of real EAC gameplay,
+RemoteAuthComplete, affected-PC stability or foreign-player login success.
+
+If an update fails, use the matching diagnostic script without deleting game
+data or disabling protection. Client rollback requires a coordinated runtime
+or forward version; reverting an updater head alone does not downgrade EXEs.
