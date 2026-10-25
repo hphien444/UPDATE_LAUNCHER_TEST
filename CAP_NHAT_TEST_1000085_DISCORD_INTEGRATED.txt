@@ -1,0 +1,7 @@
+WESTSIDE TEST 1000085 - Discord silent whitelist
+
+Mo dung Discord desktop truoc khi mo TEST. Launcher tu nhan ID va doi chieu whitelist da duyet tren https://api.westsidecity.xyz/wl-ip/#discord .
+Khong can DiscordLink.exe, OAuth, popup hay trinh duyet. Grant con han: EAC OFF, legacy anticheat ON. Khong duyet/khong nhan ID: normal EAC path; Discord khong chan updater/UI. IP/HWID doc lap, safety-hold va loi API van fail closed.
+RPC cuc bo KHONG xac minh so huu Discord va co the bi gia mao. Day la policy silent do chu TEST chon; khong phai EAC authenticated.
+Giup test: dong game/launcher, mo Discord dung tai khoan, mo lai TEST de tu cap nhat.
+Chi TEST; CITY/ADMIN va game server khong doi.

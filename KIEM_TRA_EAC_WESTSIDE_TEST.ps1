@@ -32,7 +32,7 @@ if (-not $OutputPath) {
 if (Test-Path -LiteralPath $OutputPath) { throw 'File ket qua da ton tai; khong ghi de.' }
 
 $expected = [ordered]@{
-    'WESTSIDE TEST.exe' = '8887639c9ad89087dba3f74bb6c24311fbe5dd13af80bd42b5afda396482550a'
+    'WESTSIDE TEST.exe' = '22ab5872a0defbc98120007e3d127bc583c633dd387bd896328c77aa7d274f0d'
     'WESTSIDE CITY.app/EOSBootstrapper.exe' = '1ccec16db625a1e765eced6aa7e75f4178ce48ff9f8ddd832002e55b784ac6e7'
     'WESTSIDE CITY.app/EOSBootstrapper.ini' = 'ef4dcbde75f5b7ec85d4744c9690133a04d646ea5b7118d92dd710dad054d577'
     'WESTSIDE CITY.app/start_protected_game.exe' = '46d2552552ac95c436389a2c9f1aba6fda37ab998acf9b9ee026f3262dd70c53'
@@ -98,7 +98,7 @@ $logs = @(Get-ChildItem -LiteralPath (Join-Path $runtime 'logs') -Filter 'Citize
         [pscustomobject]@{ name = $_.Name; bytes = $_.Length; modifiedUtc = $_.LastWriteTimeUtc.ToString('o') }
     })
 $report = [ordered]@{
-    expectedVersion = 1000084
+    expectedVersion = 1000085
     checkedAtUtc = [DateTime]::UtcNow.ToString('o')
     launcherFileName = [IO.Path]::GetFileName($exe)
     launcherLocatedInRuntime = $launcherLocatedInRuntime
