@@ -1,0 +1,11 @@
+WESTSIDE TEST 1000087 - silent Discord whitelist session fix
+
+One built-in background MAIN identity service shares the Discord RPC connection
+across bootstrap, sticky and runtime checks. Every request obtains a fresh
+CURRENT_USER_UPDATE; no cached account/approval or PONG-based identity renewal.
+No browser, popup, OAuth, separate helper executable, API/admin URL in notices.
+Every consumer still obtains an explicit unexpired live server grant over TLS
+with nonce and CNG device proof. Revocation, account change and expiry fail closed.
+Missing Discord is not a grant; existing protected-start/safety policy is preserved.
+IP/HWID whitelist and legacy anticheat remain unchanged. TEST only.
+No VPS deployment, game-server restart, CITY or ADMIN update.
