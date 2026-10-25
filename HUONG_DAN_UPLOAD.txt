@@ -1,14 +1,3 @@
-WESTSIDE TEST 1000081 - VPS WHITELIST R2
-
-Full updater package for UPDATE_LAUNCHER_TEST, branch main.
-Upload content-addressed objects and manifest first; activate heads last.
-Preserve existing policy, audit/history and unrelated repository files.
-Never overwrite existing content-addressed objects with different bytes.
-
-Whitelist authorization uses https://api.westsidecity.xyz/wl-ip/api/launcher-decision
-on VPS 103.98.151.240. GitHub only distributes TEST updater artifacts.
-Fresh check is required on every launch. Network/API failures never grant bypass.
-Official catalog is signed and verified for this runtime; do not mix DLLs.
-
-This file describes the package, not proof of publication.
-See the separate deployment receipt for public verification and commit.
+WESTSIDE TEST 1000082 - SG gateway for whitelist, launcher auth/profile and EOS.
+TEST only; preserve CITY/ADMIN and game relay. No private credentials in this package.
+Never replace individual signed DLLs without the matching catalog and MAIN.

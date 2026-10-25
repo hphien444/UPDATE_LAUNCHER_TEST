@@ -1,0 +1,14 @@
+WESTSIDE TEST 1000082 - SINGAPORE LAUNCHER GATEWAY
+Whitelist live, dang nhap/ho so va EOS token qua https://sg.westsidecity.xyz.
+SG chuyen tiep mTLS ve authority/backend VN; khong thay policy hay du lieu tai khoan.
+SG ghi IP IPv4 thuc cua ket noi; khong nhan IP tu header do client tu khai.
+Khong co whitelist fail-open, stale grant, cache decision hay tu whitelist IP relay.
+API khong truy cap duoc: dung an toan. Decision denied hop le: giu protected path.
+Avatar giu origin api.westsidecity.xyz; dang nhap/profile khong phu thuoc avatar.
+GitHub van phat update TEST. CITY/ADMIN va game relay khong thay doi.
+EAC + legacy anticheat ON theo policy cu; anti-dump OFF; enforce=false giu nguyen.
+Catalog EAC da ky/verify; chi dung nguyen bo MAIN/DLL/UI/catalog cung ban.
+Da test live whitelist, CORS, tu choi token sai, transport IPv4/TLS va goi updater.
+Chua xac minh tai khoan that, may nguoi choi nuoc ngoai, gameplay/RemoteAuthComplete.
+Mo WESTSIDE TEST.exe de cap nhat, dong launcher/game cu truoc khi thu lai.
+Script KIEM_TRA_EAC chi doc hash/trang thai, khong sua hay mo launcher.

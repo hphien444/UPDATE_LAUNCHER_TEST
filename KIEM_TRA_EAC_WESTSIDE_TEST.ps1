@@ -32,18 +32,19 @@ if (-not $OutputPath) {
 if (Test-Path -LiteralPath $OutputPath) { throw 'File ket qua da ton tai; khong ghi de.' }
 
 $expected = [ordered]@{
-    'WESTSIDE TEST.exe' = 'c3a9769bcb8aa7c4d8e8b4bac4f001c0ae9d5955681e9f173d2a307cdd5d8fb8'
+    'WESTSIDE TEST.exe' = 'f09500a63a250a1d0ad2a49ec70fa8d6e09543e25df7b7cf3ced5ba647184c11'
     'WESTSIDE CITY.app/EOSBootstrapper.exe' = '1ccec16db625a1e765eced6aa7e75f4178ce48ff9f8ddd832002e55b784ac6e7'
     'WESTSIDE CITY.app/EOSBootstrapper.ini' = 'ef4dcbde75f5b7ec85d4744c9690133a04d646ea5b7118d92dd710dad054d577'
     'WESTSIDE CITY.app/start_protected_game.exe' = '46d2552552ac95c436389a2c9f1aba6fda37ab998acf9b9ee026f3262dd70c53'
     'WESTSIDE CITY.app/westside-eac-client.json' = 'aed533fd90e7424dac8f009088d7e809ffcd8b3dff4f4f9b4266bf0f25e817e2'
     'WESTSIDE CITY.app/EasyAntiCheat/EasyAntiCheat_EOS_Setup.exe' = '8b60d4e8962ee5b4b7130afabb029673e284367bc22a590293d14f089c9f46a0'
     'WESTSIDE CITY.app/EasyAntiCheat/Settings.json' = '71565d1f8ebd53bf7204f282913db2a87e63ef058dad1ef01f1d00fd4a6d008c'
-    'WESTSIDE CITY.app/EasyAntiCheat/Certificates/base.bin' = 'e5f514dfd181794ffea77036cdc18c651378dcfcb64e2cf3cd352d536c55c5c1'
+    'WESTSIDE CITY.app/EasyAntiCheat/Certificates/base.bin' = '9b56dcbfa26f9f5a9a7b958cbf2592aa37474a760af98ed01de2767607d946cd'
     'WESTSIDE CITY.app/EasyAntiCheat/Certificates/base.cer' = '330f33dbe1054a3de4e963706cb9cabec86f85a688196b26652f65168efc4c6d'
     'WESTSIDE CITY.app/EasyAntiCheat/Certificates/runtime.conf' = '50ad2eda3080658344273de5bcc68a89f3148692820dfaffb3056edd7cff4e5d'
-    'WESTSIDE CITY.app/sticky.dll' = '0692984f8cb0904642aec54ba55b2b588a33d5848242c481510f380645c31cee'
-    'WESTSIDE CITY.app/citizen-anticheat.dll' = '2819488435d5f2d30127be4dfa88672a9cc633ec724a1d5419a435ad2abb8015'
+    'WESTSIDE CITY.app/citizen/ui.zip' = '6b0b9e3e3eecf4bf7c7a635f8e7ebcd04b7c0b5bd289e05d392c151fc85b580e'
+    'WESTSIDE CITY.app/sticky.dll' = 'e2a92a3572095df0a60e05f21ed27308889bef31434f9aa298da0a5d2217f2a8'
+    'WESTSIDE CITY.app/citizen-anticheat.dll' = '2ba56102d2707748be964fedf9f54fb44628d6ba4de290d918353b98c6089aeb'
     'WESTSIDE CITY.app/CitizenFX_SubProcess_game_3258_aslr.bin' = '0ba711b7180bd18fefc581f3e2f877c4b848ce92164be42909e5d274c6943ddb'
     'WESTSIDE CITY.app/data/cache/subprocess/WESTSIDE CITY_GameProcess.exe' = '0ba711b7180bd18fefc581f3e2f877c4b848ce92164be42909e5d274c6943ddb'
 }
@@ -97,7 +98,7 @@ $logs = @(Get-ChildItem -LiteralPath (Join-Path $runtime 'logs') -Filter 'Citize
         [pscustomobject]@{ name = $_.Name; bytes = $_.Length; modifiedUtc = $_.LastWriteTimeUtc.ToString('o') }
     })
 $report = [ordered]@{
-    expectedVersion = 1000081
+    expectedVersion = 1000082
     checkedAtUtc = [DateTime]::UtcNow.ToString('o')
     launcherFileName = [IO.Path]::GetFileName($exe)
     launcherLocatedInRuntime = $launcherLocatedInRuntime
