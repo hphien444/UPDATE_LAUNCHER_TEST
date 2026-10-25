@@ -1,0 +1,8 @@
+WESTSIDE TEST 1000086 - player notice privacy
+
+An duong dan API/trang quan tri trong thong bao tuong thich cho nguoi choi.
+Giu ma loi/ma thiet bi de gui ho tro. Khong mo browser hay yeu cau helper.
+Khong doi quyen da duyet, IP/HWID/Discord, EAC hoac anticheat cu.
+Chi client TEST; khong deploy VPS, khong restart game, khong sua CITY/ADMIN.
+Dong game/launcher va mo lai TEST de tu cap nhat.
+An URL tren giao dien KHONG phai bao mat endpoint; xac thuc API van can thiet.
