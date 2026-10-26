@@ -1,0 +1,27 @@
+WESTSIDE TEST 1000091 - restart image-query recovery
+
+TEST only. Do not deploy CITY/ADMIN or modify whitelist/backend/game servers.
+This package preserves all 437 signed runtime files and the official EAC catalog.
+
+Changes:
+- Retry a failed Win32 process-image lookup using the Windows native image path.
+- Match the exact installation and Windows logon; leave other installs alone.
+- Confirm an exiting process using its retained handle, not the query error.
+- Do not treat a failed logon query as proof that an old session is unrelated.
+- Still refuse to start overlapping sessions when identity/termination is denied.
+No shared EAC service stop, driver unload, security bypass or hold deletion.
+
+IMPORTANT for clients blocked in TEST1000090:
+The old restart check runs BEFORE updater, so it may prevent auto-update.
+Close WESTSIDE TEST and its game, download the new WESTSIDE TEST.exe from
+https://raw.githubusercontent.com/hphien444/UPDATE_LAUNCHER_TEST/main/WESTSIDE%20TEST.exe
+and replace only the old WESTSIDE TEST.exe in the SAME installation folder.
+Do not rename the launcher, erase WESTSIDE CITY.app or delete safety markers.
+If Windows locks that EXE, restart Windows, then replace it before opening TEST.
+Once running, normal automatic updates resume. No Discord helper is required.
+
+A real Windows access denial can still require closing the old session manually.
+This release does not claim to fix Windows BSOD/hardware faults or prove gameplay.
+Ask the owner to confirm affected-PC protected restart and server join on TEST
+before a separate CITY/ADMIN rollout. Public publication is proven only by the
+release receipt and complete main readback, not by this local archive alone.
