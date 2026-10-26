@@ -1,1 +1,1 @@
-WESTSIDE TEST 1000089: live Discord/device lease renewal continues during long resource loading. A lost/revoked lease shows WL-SESSION and requires restart, never silently authorizes EAC-OFF. EAC and legacy policy preserved. TEST only; CITY/ADMIN/backend unchanged. Actual affected-player server join still requires confirmation.
+WESTSIDE TEST 1000090: bounded restart of verified same-install TEST sessions before update/EAC. Shared EAC service, other games and whitelist authority unchanged. Do not promote CITY before affected-player acceptance.

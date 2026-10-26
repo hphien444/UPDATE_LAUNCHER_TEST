@@ -1,0 +1,1 @@
+WESTSIDE TEST 1000090: bounded restart of verified same-install TEST sessions before update/EAC. Shared EAC service, other games and whitelist authority unchanged. Do not promote CITY before affected-player acceptance.
