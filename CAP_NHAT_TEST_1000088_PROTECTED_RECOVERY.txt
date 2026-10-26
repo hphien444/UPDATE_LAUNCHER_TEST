@@ -1,0 +1,1 @@
+WESTSIDE TEST 1000088: protected recovery candidate. TEST-only publication after local verification. CITY/ADMIN unchanged. Actual affected-player gameplay must pass before CITY release.
