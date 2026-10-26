@@ -1,1 +1,1 @@
-WESTSIDE TEST 1000088: protected recovery candidate. TEST-only publication after local verification. CITY/ADMIN unchanged. Actual affected-player gameplay must pass before CITY release.
+WESTSIDE TEST 1000089: live Discord/device lease renewal continues during long resource loading. A lost/revoked lease shows WL-SESSION and requires restart, never silently authorizes EAC-OFF. EAC and legacy policy preserved. TEST only; CITY/ADMIN/backend unchanged. Actual affected-player server join still requires confirmation.
