@@ -1,0 +1,45 @@
+WESTSIDE TEST - HUONG DAN CHO QUAN NET (tu ban 1000094)
+=========================================================
+
+Tu ban 1000094, may co phan mem quan ly phong may (CCBoot, iCafe8, gCafe,
+CyberStation, CSM...) KHONG con bi launcher dung lai truoc Easy Anti-Cheat.
+May quan net mo game qua EAC giong may ca nhan.
+
+1. Cai san dich vu EAC vao image (khuyen nghi cho may diskless/dong bang)
+-------------------------------------------------------------------------
+EAC can dich vu Windows "EasyAntiCheat_EOS" (cai bang quyen Administrator).
+May diskless hoac co phan mem dong bang se mat dich vu nay sau moi lan khoi
+dong lai, nen lan mo game nao cung phai cai lai va hien hop UAC. Cach tranh:
+
+  a. Vao che do ghi image (Super/Admin workstation cua phan mem quan ly).
+  b. Mo Command Prompt bang "Run as administrator", chuyen den thu muc:
+       <thu muc WESTSIDE TEST>\WESTSIDE CITY.app\EasyAntiCheat
+  c. Chay bo cai chinh thuc cua Easy Anti-Cheat:
+       EasyAntiCheat_EOS_Setup.exe install bc82900358664953a3be2ceea8697916
+     Neu dich vu da co nhung bi loi:
+       EasyAntiCheat_EOS_Setup.exe repair bc82900358664953a3be2ceea8697916
+  d. Mo WESTSIDE TEST mot lan, vao server cho EAC chay xong, thoat game.
+  e. Luu (commit) image theo cach cua phan mem quan ly.
+
+Ma tren la Product ID cong khai cua WESTSIDE TEST, khong phai mat khau.
+Khi WESTSIDE TEST cap nhat EAC, lam lai buoc c-e neu launcher bao loi EAC.
+
+2. Nhung viec KHONG lam
+-----------------------
+- Khong tat Windows Defender/antivirus, Secure Boot hay kiem tra chu ky driver.
+- Khong xoa/sua file trong WESTSIDE CITY.app de "ne" EAC.
+- Neu phan mem quan ly co danh sach driver duoc phep, hay cho phep driver/dich
+  vu EasyAntiCheat_EOS thay vi tat bao ve.
+
+3. Khi may bi man hinh xanh hoac EAC khong chay
+-----------------------------------------------
+- Neu Windows bi man hinh xanh sau khi mo game, lan mo sau launcher se tu dung
+  an toan. Chup ma loi tren man hinh xanh, lay file trong C:\Windows\Minidump
+  (neu co) va file WESTSIDE CITY.app\westside-eac-bootstrap.log gui admin.
+- Admin co the duyet IP public cua quan (co thoi han) neu EAC van khong chay
+  duoc tren he thong cua quan; may duoc duyet chay che do tuong thich.
+
+4. May ao (VMware, VirtualBox, Hyper-V, QEMU/KVM...)
+----------------------------------------------------
+Easy Anti-Cheat co chinh sach rieng ve may ao; launcher khong the va khong
+duoc bo qua chinh sach do. Nguoi choi can may that, hoac lien he admin.
