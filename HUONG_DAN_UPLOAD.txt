@@ -1,7 +1,13 @@
-WESTSIDE TEST 1000095 experimental: TEST bootstrap and SDK use the separate WESTSIDE_EAC_TEST deployment, whose official Epic CDN serves EAC10489. No .exe.eac development override is shipped. Legacy module diagnostics do not replace BeginSession or server authentication.
+WESTSIDE TEST 1000096 - westsidecity.cfg compatibility
+Tu dong nhan vietmycity.cfg cu, giu file cu; uu tien westsidecity.cfg da co.
+Chi TEST, giu EAC10489, isolated TEST30140, whitelist va safety hold.
 
-TEST now connects ONLY to the isolated test server on TCP/UDP30140, through the existing Vietnam/Singapore routes. Its simple test world has no CITY economy, character database, production resources, webhook or bans. CITY on30130, its updater and Live EAC13304 are not changed or restarted. Do not use this experimental TEST launcher to join CITY.
-
-Close TEST/game normally, then reopen WESTSIDE TEST to receive the GitHub update. Existing approved-whitelist behavior remains: approved sessions use compatibility mode; otherwise EAC starts subject to existing BugCheck/manual safety holds. This release does not auto-whitelist or erase safety history.
-
-EAC10489 is a legacy module. Compatibility/security support on every machine is not guaranteed; Epic may override a module selection. Server EAC startup and automated updater checks are not proof of protected gameplay/RemoteAuthComplete. Do not describe this as a universal VM or cafe fix.
+Dong game/launcher roi mo lai WESTSIDE TEST de tu cap nhat.
+Cau hinh luu tai %APPDATA%\CitizenFX\westsidecity.cfg theo tai khoan Windows.
+Neu chi co vietmycity.cfg: sao chep nguyen noi dung sang ten moi, khong xoa file cu.
+Neu da co ca hai: uu tien westsidecity.cfg, ke ca khi file moi trong.
+Neu chua sao chep duoc: doc file cu, khong ghi de file moi vua duoc tao.
+SDK dung cap ten rieng vietmycity_sdk.cfg -> westsidecity_sdk.cfg.
+Khong doi convar, keybind hay URI ket noi. Khong cap nhat CITY/ADMIN/server.
+Catalog EAC duoc ky lai bang cong cu chinh thuc; khong tat EAC.
+Kiem thu filesystem/regression/updater khong thay the gameplay tren may nguoi choi.

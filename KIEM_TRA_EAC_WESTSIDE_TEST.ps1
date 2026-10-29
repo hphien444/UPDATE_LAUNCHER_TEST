@@ -32,14 +32,14 @@ if (-not $OutputPath) {
 if (Test-Path -LiteralPath $OutputPath) { throw 'File ket qua da ton tai; khong ghi de.' }
 
 $expected = [ordered]@{
-    'WESTSIDE TEST.exe' = 'daf2f9dc9e623ad7495cb92a8f53d977046b7935346a21cfd4c0694b4a57959b'
+    'WESTSIDE TEST.exe' = '9e056bc9f6aa638e09c478de6b4d4f0cef33b7dc7519ca1bc7f70af32340d5f6'
     'WESTSIDE CITY.app/EOSBootstrapper.exe' = '1ccec16db625a1e765eced6aa7e75f4178ce48ff9f8ddd832002e55b784ac6e7'
     'WESTSIDE CITY.app/EOSBootstrapper.ini' = 'ef4dcbde75f5b7ec85d4744c9690133a04d646ea5b7118d92dd710dad054d577'
     'WESTSIDE CITY.app/start_protected_game.exe' = '46d2552552ac95c436389a2c9f1aba6fda37ab998acf9b9ee026f3262dd70c53'
     'WESTSIDE CITY.app/westside-eac-client.json' = '42cf19b62c5f9c7e845898057a11a5c585a1050eb0738fa43180f4728a5699fa'
     'WESTSIDE CITY.app/EasyAntiCheat/EasyAntiCheat_EOS_Setup.exe' = '8b60d4e8962ee5b4b7130afabb029673e284367bc22a590293d14f089c9f46a0'
     'WESTSIDE CITY.app/EasyAntiCheat/Settings.json' = '47a50f4bb13e232ad034779aa50e62c20f068e10780011c06382f6edc84182de'
-    'WESTSIDE CITY.app/EasyAntiCheat/Certificates/base.bin' = 'aaf23c9016ac5b984babcb75af9712f7abe28320ae8e4639875c62e10d588e8b'
+    'WESTSIDE CITY.app/EasyAntiCheat/Certificates/base.bin' = '54bb7c1706969f406ba8c51ae01a1c1ec5c61a7f9c7ccef2646ade7f7affa8a8'
     'WESTSIDE CITY.app/EasyAntiCheat/Certificates/base.cer' = '330f33dbe1054a3de4e963706cb9cabec86f85a688196b26652f65168efc4c6d'
     'WESTSIDE CITY.app/EasyAntiCheat/Certificates/runtime.conf' = '50ad2eda3080658344273de5bcc68a89f3148692820dfaffb3056edd7cff4e5d'
     'WESTSIDE CITY.app/citizen/ui.zip' = 'd147079831e80cbf4a2f8e82ef4a9bceadde31b2ee12000a60783f86bccd3bfd'
@@ -98,7 +98,7 @@ $logs = @(Get-ChildItem -LiteralPath (Join-Path $runtime 'logs') -Filter 'Citize
         [pscustomobject]@{ name = $_.Name; bytes = $_.Length; modifiedUtc = $_.LastWriteTimeUtc.ToString('o') }
     })
 $report = [ordered]@{
-    expectedVersion = 1000095
+    expectedVersion = 1000096
     checkedAtUtc = [DateTime]::UtcNow.ToString('o')
     launcherFileName = [IO.Path]::GetFileName($exe)
     launcherLocatedInRuntime = $launcherLocatedInRuntime

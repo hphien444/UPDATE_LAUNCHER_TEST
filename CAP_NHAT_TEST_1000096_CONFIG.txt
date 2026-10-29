@@ -1,0 +1,13 @@
+WESTSIDE TEST 1000096 - westsidecity.cfg compatibility
+Tu dong nhan vietmycity.cfg cu, giu file cu; uu tien westsidecity.cfg da co.
+Chi TEST, giu EAC10489, isolated TEST30140, whitelist va safety hold.
+
+Dong game/launcher roi mo lai WESTSIDE TEST de tu cap nhat.
+Cau hinh luu tai %APPDATA%\CitizenFX\westsidecity.cfg theo tai khoan Windows.
+Neu chi co vietmycity.cfg: sao chep nguyen noi dung sang ten moi, khong xoa file cu.
+Neu da co ca hai: uu tien westsidecity.cfg, ke ca khi file moi trong.
+Neu chua sao chep duoc: doc file cu, khong ghi de file moi vua duoc tao.
+SDK dung cap ten rieng vietmycity_sdk.cfg -> westsidecity_sdk.cfg.
+Khong doi convar, keybind hay URI ket noi. Khong cap nhat CITY/ADMIN/server.
+Catalog EAC duoc ky lai bang cong cu chinh thuc; khong tat EAC.
+Kiem thu filesystem/regression/updater khong thay the gameplay tren may nguoi choi.
